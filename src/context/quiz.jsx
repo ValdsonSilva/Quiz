@@ -9,7 +9,7 @@ const initialState = {
 }
 
 const quizReducer = (state, action) => {
-
+        
 }
 
 //Meu context
