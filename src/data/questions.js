@@ -25,8 +25,7 @@ const data = [
     answer: "querySelector",
   },
   {
-    question:
-      "Qual destas propriedades da a quantidade de elementos de um array?",
+    question:"Qual destas propriedades da a quantidade de elementos de um array?",
     options: ["qty", "length", "items", "index"],
     answer: "length",
   },

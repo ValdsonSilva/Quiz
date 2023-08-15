@@ -5,15 +5,13 @@ import { Quizcontext } from "../context/quiz"
 
 const Welcome = () => {
   //consumindo contexto
-  const quizState = useContext(Quizcontext)
-
-  console.log(quizState)
+  const [quizState, dispatch] = useContext(Quizcontext)
 
   return (
     <div id='welcome'>
         <h2>Seja bem-vindo!</h2>
         <p>Clique no botão abaixo para começar:</p>
-        <button>Iniciar</button>
+        <button onClick={() => dispatch({type: "CHANGE_STATE"})}>Iniciar</button>
         <img src={Quiz} alt='Início do Quiz'/>
     </div>
   )
