@@ -7,7 +7,8 @@ const initialState = {
     gameStage: STAGES[0],
     questions,
     currentQuestion: 0,
-    score: 0
+    score: 0,
+    answerSelected: false,
 }
 
 const quizReducer = (state, action) => {
@@ -55,7 +56,7 @@ const quizReducer = (state, action) => {
                 return {
                     ...state,
                     score: state.score + correctAnswer,
-                    
+                    answerSelected: option,
                 }
             default:
                 return state

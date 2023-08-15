@@ -23,7 +23,10 @@ function Question() {
                 <Option option={option} key={option} answer={currentQuestion.answer} selectOption={() => onSelectOption(option)}/>
             ))}
         </div>
-        <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>continuar</button>
+        {quizState.answerSelected && (
+             <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>continuar</button>
+        )}
+       
     </div>
   )
 }
