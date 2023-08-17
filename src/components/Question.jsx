@@ -11,7 +11,9 @@ function Question() {
 
   const onSelectOption = (option) => {
      //status e dados de checagem
-     dispatch({type: "CHECK_ANSWER", payload: {answer: currentQuestion.answer, option}})
+     dispatch({
+    type: "CHECK_ANSWER", 
+     payload: {answer: currentQuestion.answer, option}})
   }
 
   return (
