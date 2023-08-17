@@ -10,6 +10,8 @@ const Option = ({option ,selectOption, answer}) => {
   return (
     // Aqui temos que passar a refência da função e não a função propriamente dita!
     <div className={`option ${
+      /*esse código controla o estilo da opção com base no acerto 
+        da respota dado pelo usuário*/
       quizState.answerSelected && option === answer ? "correct" : "" 
       } ${
         quizState.answerSelected && option !== answer ? "wrong" : ""
