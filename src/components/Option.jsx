@@ -16,6 +16,8 @@ const Option = ({option ,selectOption, answer}) => {
       } ${
         quizState.answerSelected && option !== answer ? "wrong" : ""
       }`} 
+
+      // no clique ele acessa/dispara o selectOption
       onClick={selectOption}>
       
       <p>{option}</p>

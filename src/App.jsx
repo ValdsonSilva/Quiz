@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     // embaralhar as perguntas
     dispatch({type: "REODER_QUESTIONS"})
-  }, [])
+}, [])  //A cada renderezição([]) o "useEffect" irá acessar o action.type do reducer
 
   return (
     <div className='App'>

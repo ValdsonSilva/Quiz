@@ -6,7 +6,9 @@ import { Quizprovider } from './context/quiz.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    {/* Disponibilizando os meus states para toda a aplicação */}
     <Quizprovider>
+      {/* Comp default do react.js para renderizar a aplicação */}
       <App />
     </Quizprovider>
     

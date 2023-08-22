@@ -12,7 +12,7 @@ const initialState = {
     currentQuestion: 0,
     // estado de acerto do usário
     score: 0,
-
+    // resposta selecionada pelo user
     answerSelected: false,
 }
 
@@ -68,11 +68,11 @@ const quizReducer = (state, action) => {
                 // para quebrar o bug de contar vários acertos na mesma pergunta
                 if (state.answerSelected) return state;
 
-                // a resposta certa
+                // recebendo a resposta certa
                 const answer = action.payload.answer
-                // a resposta escolhida pelo user
+                // recebendo a resposta escolhida pelo user
                 const option = action.payload.option 
-                // var de controle
+                // var de controle de acertos
                 let correctAnswer = 0 
                 
                 // checar se são iguais
@@ -82,6 +82,7 @@ const quizReducer = (state, action) => {
                     ...state,
                     // somar 1 a var de estado "score"
                     score: state.score + correctAnswer,
+                    // o state option recebe a opção do user
                     answerSelected: option,
                 }
             
