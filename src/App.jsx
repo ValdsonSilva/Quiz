@@ -11,8 +11,9 @@ import './App.css'
 function App() {
   const [quizState, dispatch] = useContext(Quizcontext);
 
+  document.title = "Quiz Javascript"
+
   useEffect(() => {
-    document.title = "Quiz Javascript"
     // embaralhar as perguntas
     dispatch({type: "REODER_QUESTIONS"})
 }, [])  //A cada renderezição([]) o "useEffect" irá acessar o action.type do reducer
