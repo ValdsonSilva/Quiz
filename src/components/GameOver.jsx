@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { Quizcontext } from '../context/quiz'
 
-import Welldone from "../img/Welldone.svg"
+import Welldone from "../img/welldone.svg"
 
 import "./GameOver.css"
 
